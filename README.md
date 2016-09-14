@@ -10,3 +10,6 @@ Supported Dynamic DNS services:
 - Add configuration parser.
 - Create a more generic error parser.
 - make a plugin based architecture.
+- Create a setup.py
+- write tests
+- Make it into a package
