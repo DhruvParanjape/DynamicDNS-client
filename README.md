@@ -6,7 +6,7 @@ Supported Dynamic DNS services:
 - FreeDNS
 - DuckDNS
 
-#TODO:
+###TODO:
 - Add configuration parser.
 - Create a more generic error parser.
 - make a plugin based architecture.
