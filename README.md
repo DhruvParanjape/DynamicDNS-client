@@ -7,7 +7,6 @@ Supported Dynamic DNS services:
 - DuckDNS
 
 ###TODO:
-- Add configuration parser.
 - Create a more generic error parser.
 - make a plugin based architecture.
 - Create a setup.py
