@@ -11,7 +11,7 @@ Supported Dynamic DNS services:
 ####Dependancies:
 - Requests
 - netifaces
-- 
+
 ####TODO:
 - Create a more generic error parser.
 - make a plugin based architecture.
