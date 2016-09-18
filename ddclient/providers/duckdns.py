@@ -1,5 +1,5 @@
 from requests import get
-from Logger import Log
+from ddclient.Configurators.Logger import Log
 
 def DuckDNS(token,given_domain, ip):
 	domain = entered_domain.split(".",1)[0]
