@@ -1,6 +1,6 @@
 from hashlib import sha1
 from requests import get
-from Logger import Log
+from ddclient.Configurators.Logger import Log
 
 def FreeDNS(username, password, domain):
 	fetch_url = "https://freedns.afraid.org/api/?action=getdyndns&v=2&sha="
