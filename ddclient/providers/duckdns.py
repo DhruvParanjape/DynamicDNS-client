@@ -1,7 +1,7 @@
 from requests import get
 from Logger import Log
 
-def DuckDNS(given_domain,token, ip):
+def DuckDNS(token,given_domain, ip):
 	domain = entered_domain.split(".",1)[0]
 	update_url = ("https://nouser:%s"
 		"@www.duckdns.org/nic/update?hostname=%s"
