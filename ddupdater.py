@@ -1,13 +1,12 @@
 from freedns import freeDNS
 from duckdns import DuckDNS
 from Changeip import ChangeIP
-from os import fork
+from daemon import DaemonContext
 from time import sleep
 
 #daemonize
-process_id = fork()
 
-if process_id != 0:
+with DaemonContext():
 
 	while  True:
 		#Read the config
