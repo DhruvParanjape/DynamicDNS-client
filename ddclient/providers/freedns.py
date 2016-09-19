@@ -1,5 +1,6 @@
 from hashlib import sha1
 from requests import get
+from os.path import isfile
 from ddclient.Configurators.Logger import Log
 
 def FreeDNS(username, password, domain):
@@ -7,8 +8,9 @@ def FreeDNS(username, password, domain):
 	cache_filename = "ddclient.cache"
 	cache = ""
 	update_url = ""
-	with open(cache_filename,"w") as f:
-		cache = f.read()
+	if isfile(cache_filename) == True:
+		with open(cache_filename,"w") as f:
+			cache = f.read()
 	if cache.split("|")[-1] == domain:
 		update_url = cache.split("|")[0]
 		Log("sending "+update_url)
