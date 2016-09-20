@@ -1,4 +1,4 @@
-from ddclient.providers.freedns import freeDNS
+from ddclient.providers.freedns import FreeDNS, FreeDNS2
 from ddclient.providers.duckdns import DuckDNS
 from ddclient.providers.Changeip import ChangeIP
 from ddclient.Configurators.Logger import Log
@@ -17,13 +17,14 @@ with DaemonContext():
 	while  True:
 		#Read the config
 		provider, username, password, domain, iface_name, update_interval = FetchParameters(config_file_path)
-		if (provider == freeDNS):
-			freeDNS(username, password, domain)
+		ip = GetIPfromInterface(iface_name)
+		if (provider == FreeDNS):
+			FreeDNS(username, password, domain, ip)
+		if (provider == FreeDNS2):
+			FreeDNS2(username, password, domain, ip)
 		elif (provider == DuckDNS):
-			ip = GetIPfromInterface(iface_name)
 			DuckDNS(password,domain,ip)
 		elif (provider == ChangeIP):
-			ip = GetIPfromInterface(iface_name):
 			ChangeIP(username,password,domain,ip)
 		else :
 			Log("Unknown provider configured shutting down...")
